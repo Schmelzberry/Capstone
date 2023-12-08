@@ -51,4 +51,6 @@ https://www.youtube.com/watch?v=YwZdtLEtROA
 1:05 back from lunch and working on draw.io diagram
 
 1:25 done with basic diagram, back to coding normally
+
+~2:30 encountered a bug with the artist form, and now it works but it wont display information in DOM. Still a WIP @ 3:45
 ```
