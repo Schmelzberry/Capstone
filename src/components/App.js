@@ -1,15 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import ArtistList from "./ArtistList";
+import ViewControl from "./ViewControl";
 
 
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <h2>Welcome to Ohp!</h2>
-      <h2>Let's start by signing up.</h2>
-      <ArtistList />
+      <ViewControl />
     </React.Fragment>
   );
 }
