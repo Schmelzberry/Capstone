@@ -44,3 +44,8 @@ https://www.youtube.com/watch?v=YwZdtLEtROA
 #### 4-5pm
 
 * 4:40: Still working on Blazor application but really like the idea of using C# and Blazor as opposed to React after spending the afternoon researching. I feel like next week I will be ready to start coding if I can definitively decide on the technology I want to use.
+
+
+### Friday, 12/08
+
+8:30: Work on research proposal log, committing to React

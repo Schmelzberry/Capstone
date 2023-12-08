@@ -24,6 +24,9 @@
 
 #### What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 
+Database/Backend - Firestore w noSQL
+Front End - React
+
 * I need to decide which technology I want to use here. I'm torn between React and trying React Native upon reaching MVP, and trying a c# application with Blazer or MVC. 
 
 * I'm also considering learning Python for this project and trying to integrate that.
