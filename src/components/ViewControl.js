@@ -21,8 +21,10 @@ class ViewControl extends React.Component {
 
 handleAddingNewArtistToList = (newArtist) => {
   const newMainArtistList = this.state.mainArtistList.concat(newArtist);
-  this.setState({mainArtistList: newMainArtistList,
-                formVisible: false });
+  this.setState({
+    mainArtistList: newMainArtistList,
+    formVisible: false 
+  });
 }
 
 
@@ -33,7 +35,7 @@ handleAddingNewArtistToList = (newArtist) => {
 
     if (this.state.formVisible) {
       currentlyVisibleState = <NewArtistForm onNewArtistCreation={this.handleAddingNewArtistToList} />
-      buttonText="Return to Artists"
+      buttonText="Return to Artists";
     } 
     else {
       currentlyVisibleState = <ArtistList 

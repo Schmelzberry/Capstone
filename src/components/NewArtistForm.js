@@ -6,7 +6,7 @@ function NewArtistForm(props){
 
   function handleNewArtistFormSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({
+    props.onNewArtistCreation({
       name: event.target.name.value,
       city: event.target.city.value,
       style: event.target.style.value,
