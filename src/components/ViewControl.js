@@ -8,7 +8,8 @@ class ViewControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisible: false
+      formVisible: false,
+      mainArtistList: []
     };
   }
 
@@ -18,6 +19,12 @@ class ViewControl extends React.Component {
   }));
 }
 
+handleAddingNewArtistToList = (newArtist) => {
+  const newMainArtistList = this.state.mainArtistList.concat(newArtist);
+  this.setState({mainArtistList: newMainArtistList,
+                formVisible: false });
+}
+
 
   render(){
   
@@ -25,11 +32,12 @@ class ViewControl extends React.Component {
     let buttonText= null;
 
     if (this.state.formVisible) {
-      currentlyVisibleState = <NewArtistForm />
+      currentlyVisibleState = <NewArtistForm onNewArtistCreation={this.handleAddingNewArtistToList} />
       buttonText="Return to Artists"
     } 
     else {
-      currentlyVisibleState = <ArtistList />
+      currentlyVisibleState = <ArtistList 
+      artistList={this.state.mainArtistList} />
       buttonText="Add Artist"
     }
     return(
