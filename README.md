@@ -49,4 +49,6 @@ https://www.youtube.com/watch?v=YwZdtLEtROA
 11:50 step back from coding before lunch and go to draw.io to better plan state management for react app
 
 1:05 back from lunch and working on draw.io diagram
+
+1:25 done with basic diagram, back to coding normally
 ```
