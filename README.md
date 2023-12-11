@@ -68,5 +68,6 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 
 8:40: netflix clone continued, search bar functionality seems like it will transfer well to my project
 
+9:15 wrap up code along project, @ 1 hour 33 minutes currently
 
 ```
