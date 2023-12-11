@@ -54,3 +54,8 @@ https://www.youtube.com/watch?v=YwZdtLEtROA
 
 ~2:30 encountered a bug with the artist form, and now it works but it wont display information in DOM. Still a WIP @ 3:45
 ```
+
+### Sunday, 12/10
+
+```
+6:50 - UI inspiration. Looking at Netflix, Air BnB, Spotify```
