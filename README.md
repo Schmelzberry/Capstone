@@ -66,5 +66,7 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 
 8:00 : Continue netflix clone
 
+8:40: netflix clone continued, search bar functionality seems like it will transfer well to my project
+
 
 ```
