@@ -26,7 +26,7 @@
 
 * Front End - React
 * Back End - c# possibly needed for API calls?
-* Database/Backend - Firestore w noSQL
+* Database - Firestore w noSQL
 
 #### If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 
