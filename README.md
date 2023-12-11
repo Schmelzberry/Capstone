@@ -58,4 +58,11 @@ https://www.youtube.com/watch?v=YwZdtLEtROA
 ### Sunday, 12/10
 
 ```
-6:50 - UI inspiration. Looking at Netflix, Air BnB, Spotify```
+6:50 UI inspiration. Looking at Netflix, Air BnB, Spotify
+
+7:20 Follow code along of semi recent Netflix clone
+
+https://www.youtube.com/watch?v=HW5roUF2RLg
+
+
+```
