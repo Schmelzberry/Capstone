@@ -5,19 +5,19 @@ import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
 
 
-class ViewControl extends React.Component {
+function ViewControl {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      formVisible: false,
-      mainArtistList: [],
-      selectedArtist: null,
-      editing: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     formVisible: false,
+  //     mainArtistList: [],
+  //     selectedArtist: null,
+  //     editing: false
+  //   };
+  // }
 
-  handleClick = () => {
+  const handleClick = () => {
     if (this.state.selectedArtist != null) {
       this.setState({
         formVisible: false,
@@ -31,7 +31,7 @@ class ViewControl extends React.Component {
     }
   }
 
-handleAddingNewArtistToList = (newArtist) => {
+  const handleAddingNewArtistToList = (newArtist) => {
   const newMainArtistList = this.state.mainArtistList.concat(newArtist);
   this.setState({
     mainArtistList: newMainArtistList,
@@ -39,12 +39,12 @@ handleAddingNewArtistToList = (newArtist) => {
   });
 }
 
-handleChangingSelectedArtist = (id) => {
+const handleChangingSelectedArtist = (id) => {
   const selectedArtist = this.state.mainArtistList.filter(artist => artist.id === id)[0];
   this.setState({selectedArtist: selectedArtist});
 }
 
-handleDeletingArtist = (id) => {
+const handleDeletingArtist = (id) => {
   const newMainArtistList = this.state.mainArtistList.filter(artist => artist.id !== id);
   this.setState({
     mainArtistList: newMainArtistList,
@@ -52,12 +52,12 @@ handleDeletingArtist = (id) => {
   });
 }
 
-handleEditClick = () => {
+const handleEditClick = () => {
   console.log("handleEditClick reached!");
   this.setState({editing: true});
 }
 
-handleEditingArtistInList = (artistToEdit) => {
+const handleEditingArtistInList = (artistToEdit) => {
   const editedMainArtistList = this.state.mainArtistList
     .filter(artist => artist.id !== this.state.selectedArtist.id)
     .concat(artistToEdit);
