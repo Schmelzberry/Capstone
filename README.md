@@ -83,3 +83,5 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 11:50 Review noSQl and Hooks before refactor
 
 12:30 considered Redux for state management, going to proceed with hooks as I am more comfortable with that
+
+3:20 Looking back to LHTP to see how we implemented hooks in help queue, need to see a success case to get back on track
