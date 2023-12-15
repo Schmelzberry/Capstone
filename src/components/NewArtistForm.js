@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from 'uuid'; 
-
+import ReusableArtistForm from "./ReusableArtistForm";
 function NewArtistForm(props){
 
   function handleNewArtistFormSubmission(event) {
@@ -15,20 +15,9 @@ function NewArtistForm(props){
   }
   return(
     <React.Fragment>
-       <form onSubmit={handleNewArtistFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='First/Last name' />
-        <input
-          type='text'
-          name='city'
-          placeholder='city working in' />
-        <textarea
-          name='style'
-          placeholder='Describe artist style.' />
-        <button type='submit'>New Artist</button>
-      </form>
+        <ReusableArtistForm
+        formSubmissionHandler={handleNewArtistFormSubmission}
+        buttonText="Add Me!" />
     </React.Fragment>
   )
 }
