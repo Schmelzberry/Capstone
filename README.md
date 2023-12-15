@@ -81,3 +81,5 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 *CODED NORMALLY BETWEEN 9 and 12, commits show this
 
 11:50 Review noSQl and Hooks before refactor
+
+12:30 considered Redux for state management, going to proceed with hooks as I am more comfortable with that
