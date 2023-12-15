@@ -11,7 +11,7 @@ class ViewControl extends React.Component {
     this.state = {
       formVisible: false,
       mainArtistList: [],
-      selectedTicket: null
+      selectedArtist: null
     };
   }
 
@@ -43,14 +43,23 @@ handleChangingSelectedArtist = (id) => {
   this.setState({selectedArtist: selectedArtist});
 }
 
+handleDeletingArtist = (id) => {
+  const newMainArtistList = this.state.mainArtistList.filter(artist => artist.id !== id);
+  this.setState({
+    mainArtistList: newMainArtistList,
+    selectedArtist: null
+  });
+}
+
 
   render(){
   
     let currentlyVisibleState = null;
     let buttonText= null;
 
-    if (this.state.selectedTicket != null) {
-      currentlyVisibleState = <ArtistDetail artist = {this.state.selectedArtist} />
+    if (this.state.selectedArtist != null) {
+      currentlyVisibleState = <ArtistDetail artist = {this.state.selectedArtist} onClickingDelete = {this.handleDeletingArtist} />
+      buttonText = "Return to Artist List"
     }
      else if (this.state.formVisible) {
       currentlyVisibleState = <NewArtistForm onNewArtistCreation={this.handleAddingNewArtistToList} />
