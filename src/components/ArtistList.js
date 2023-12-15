@@ -5,13 +5,16 @@ function ArtistList(props) {
   return(
     <React.Fragment>
       < hr/>
-      {props.artistList.map((artist, index) =>
+      {props.artistList.map((artist) =>
 
-      <Artist 
+      <Artist
+      whenArtistClicked = { props.onArtistSelection }
+
       name={artist.name}
       city={artist.city}
       style={artist.style}
-      key={index}
+      id={artist.id}
+      key={artist.id}
       />
       )}
     </React.Fragment>
@@ -19,7 +22,8 @@ function ArtistList(props) {
 }
 
 ArtistList.propTypes = {
-  artistList: PropTypes.array
+  artistList: PropTypes.array,
+  onArtistSelection: PropTypes.func
 };
 
 export default ArtistList;
