@@ -77,3 +77,7 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 8:15: Look at Material UI documentation - DataGrid was very helpful on past project
 
 9:00: Back to coding project, Material UI will need to come later after i'm closer to MVP
+
+*CODED NORMALLY BETWEEN 9 and 12, commits show this
+
+11:50 Review noSQl and Hooks before refactor
