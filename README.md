@@ -75,3 +75,5 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 ### Friday, 12/15
 
 8:15: Look at Material UI documentation - DataGrid was very helpful on past project
+
+9:00: Back to coding project, Material UI will need to come later after i'm closer to MVP
