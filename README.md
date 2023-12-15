@@ -71,3 +71,7 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 9:15 wrap up code along project, @ 1 hour 33 minutes currently
 
 ```
+
+### Friday, 12/15
+
+8:15: Look at Material UI documentation - DataGrid was very helpful on past project
