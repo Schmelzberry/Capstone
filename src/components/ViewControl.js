@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NewArtistForm from './NewArtistForm';
 import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
@@ -69,7 +69,7 @@ const handleEditingArtistInList = (artistToEdit) => {
 }
 
 
-  render(){
+ 
   
     let currentlyVisibleState = null;
     let buttonText= null;
