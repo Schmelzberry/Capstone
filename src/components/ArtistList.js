@@ -12,7 +12,7 @@ function ArtistList(props) {
 
       name={artist.name}
       city={artist.city}
-      style={artist.style}
+      artistStyle={artist.artistStyle}
       id={artist.id}
       key={artist.id}
       />

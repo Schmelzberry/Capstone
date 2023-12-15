@@ -2,6 +2,7 @@ import React from 'react';
 import NewArtistForm from './NewArtistForm';
 import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
+import EditArtistForm from './EditArtistForm';
 
 
 class ViewControl extends React.Component {
@@ -21,15 +22,14 @@ class ViewControl extends React.Component {
       this.setState({
         formVisible: false,
         selectedArtist: null,
+        editing: false 
       });
+    } else {
+      this.setState(prevState => ({
+        formVisible: !prevState.formVisible,
+      }));
     }
-    else {
-    this.setState(prevState => ({
-    formVisible: !prevState.formVisible,
-
-    }));
   }
-}
 
 handleAddingNewArtistToList = (newArtist) => {
   const newMainArtistList = this.state.mainArtistList.concat(newArtist);
@@ -57,13 +57,31 @@ handleEditClick = () => {
   this.setState({editing: true});
 }
 
+handleEditingArtistInList = (artistToEdit) => {
+  const editedMainArtistList = this.state.mainArtistList
+    .filter(artist => artist.id !== this.state.selectedArtist.id)
+    .concat(artistToEdit);
+  this.setState({
+      mainArtistList: editedMainArtistList,
+      editing: false,
+      selectedArtist: null
+    });
+}
+
 
   render(){
   
     let currentlyVisibleState = null;
     let buttonText= null;
 
-    if (this.state.selectedArtist != null) {
+    if (this.state.editing ) {      
+      currentlyVisibleState = <EditArtistForm 
+      artist = {this.state.selectedArtist}
+      onEditArtist = {this.handleEditingArtistInList} />
+      buttonText = "Return to Artist List";
+    }
+
+    else if (this.state.selectedArtist != null) {
       currentlyVisibleState = <ArtistDetail
       artist = {this.state.selectedArtist}
       onClickingDelete = {this.handleDeletingArtist}

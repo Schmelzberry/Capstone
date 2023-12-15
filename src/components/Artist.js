@@ -11,7 +11,7 @@ function Artist(props){
 
           <h2>{props.name} 's Details</h2>
           <p><em>{props.city}</em></p>
-          <p><em>{props.style}</em></p>
+          <p><em>{props.artistStyle}</em></p>
           <hr />
         </div>
     </React.Fragment>
@@ -21,7 +21,7 @@ function Artist(props){
 Artist.propTypes = {
   name: PropTypes.string,
   city: PropTypes.string,
-  style: PropTypes.string,
+  artistStyle: PropTypes.string,
   id: PropTypes.string,
   whenArtistClicked: PropTypes.func,
 

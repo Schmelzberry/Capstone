@@ -9,7 +9,7 @@ function NewArtistForm(props){
     props.onNewArtistCreation({
       name: event.target.name.value,
       city: event.target.city.value,
-      style: event.target.style.value,
+      artistStyle: event.target.artistStyle.value,
       id: v4()
     });
   }

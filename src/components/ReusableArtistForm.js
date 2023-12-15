@@ -14,7 +14,7 @@ function ReusableArtistForm(props) {
           name='city'
           placeholder='City working in' />
         <textarea
-          name='Style'
+          name='artistStyle'
           placeholder='Describe your style.' />
         <button type='submit'>{props.buttonText}</button>
       </form>
