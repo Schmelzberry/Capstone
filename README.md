@@ -87,3 +87,5 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 3:20 Looking back to LHTP to see how we implemented hooks in help queue, need to see a success case to get back on track
 
 4:00 - Researching hooks vs class state management in react
+
+4:30 - know how to proceed tomorrow to refactor state management, followed along with help queue to figure it out.
