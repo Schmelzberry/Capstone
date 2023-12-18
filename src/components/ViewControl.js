@@ -108,5 +108,4 @@ const handleEditingArtistInList = (artistToEdit) => {
   );
 
 }
-}
 export default ViewControl;
