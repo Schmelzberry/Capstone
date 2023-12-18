@@ -3,6 +3,8 @@ import NewArtistForm from './NewArtistForm';
 import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
+import { collection, addDoc } from "firebase/firestore";
+import db from './../firebase.js';
 
 
 function ViewControl() {
