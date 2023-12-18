@@ -31,7 +31,7 @@ These are a WIP as the project packages and dependencies change, but for now...
 
 ## Known Bugs
 
-There are no known bugs.
+* Full calendar bug - had success creating full calendar in a webpack environment but not in actual project installing via CDN.
 
 
 ## Research & Planning Log
