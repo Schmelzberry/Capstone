@@ -136,6 +136,9 @@ https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 
 10:10: Adding calendar to my project, done researching
 
+### Monday, 12/18
+
+12:00 Read full calendar docs again 
 ## License
 
 MIT License
