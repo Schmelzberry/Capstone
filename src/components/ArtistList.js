@@ -4,8 +4,10 @@ import PropTypes from "prop-types";
 function ArtistList(props) {
   return(
     <React.Fragment>
-      < hr/>
+      <h2 class="heading">Artist List</h2>
+      
       {props.artistList.map((artist) =>
+
 
       <Artist
       whenArtistClicked = { props.onArtistSelection }

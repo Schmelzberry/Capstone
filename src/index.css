@@ -39,3 +39,8 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.heading {
+  text-align: center;
+  
+}
