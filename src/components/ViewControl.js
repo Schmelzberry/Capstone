@@ -62,9 +62,8 @@ const handleChangingSelectedArtist = (id) => {
   setSelectedArtist(selection);
 }
 
-const handleDeletingArtist = (id) => {
-  const newMainArtistList = mainArtistList.filter(artist => artist.id !== id);
-  setMainArtistList(newMainArtistList);
+const handleDeletingArtist = async (id) => {
+  await deleteDoc(doc(db,"artists", id));
   setSelectedArtist(null);
 }
 
@@ -72,13 +71,9 @@ const handleEditClick = () => {
   setEditing(true);
 }
 
-const handleEditingArtistInList = (artistToEdit) => {
-
-  const editedMainArtistList = mainArtistList
-
-    .filter(artist => artist.id !== selectedArtist.id)
-    .concat(artistToEdit);
-    setMainArtistList(editedMainArtistList);
+const handleEditingArtistInList = async (artistToEdit) => {
+  const artistRef = doc(db, "artists", artistToEdit.id);
+  await updateDoc(artistRef, artistToEdit);
   setEditing(false);
   setSelectedArtist(null);
 }
