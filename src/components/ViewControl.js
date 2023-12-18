@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NewArtistForm from './NewArtistForm';
 import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
-import { collection, addDoc, onSnapshot } from "firebase/firestore";
+import { collection, addDoc, doc, updateDoc, onSnapshot, deleteDoc } from "firebase/firestore";
 import db from './../firebase.js';
 
 
@@ -15,6 +15,7 @@ const [selectedArtist, setSelectedArtist] = useState(null);
 const [editing, setEditing] = useState(false);
 const [error, setError] = useState(null);
 
+useEffect(() => {
 const unSubscribe = onSnapshot(
   collection(db, "artists"),
   (collectionSnapshot) => {
@@ -25,10 +26,10 @@ const unSubscribe = onSnapshot(
           id: doc.id
         });
     });
-    setMainTicketList(artists);
+    setMainArtistList(artists);
   },
   (error) => {
-    // do something with error
+    setError(error.message);
   }
 );
 return () => unSubscribe();
@@ -87,8 +88,12 @@ const handleEditingArtistInList = (artistToEdit) => {
   
     let currentlyVisibleState = null;
     let buttonText= null;
-
-    if (editing ) {      
+    
+    if (error) {
+      currentlyVisibleState = <p>There was an error: {error}</p>
+    }
+    
+    else if (editing) {      
       currentlyVisibleState = 
       <EditArtistForm 
       artist = {selectedArtist}
@@ -120,6 +125,7 @@ const handleEditingArtistInList = (artistToEdit) => {
     <React.Fragment>
       {currentlyVisibleState}
       <button onClick={handleClick}>{buttonText}</button>
+      {error ? null : <button onClick={handleClick}>{buttonText}</button>}
     </React.Fragment>
   );
   
