@@ -27,10 +27,11 @@ const [editing, setEditing] = useState(false);
     }
   }
 
-  const handleAddingNewArtistToList = (newArtist) => {
-  const newMainArtistList = mainArtistList.concat(newArtist);
-  setMainArtistList(newMainArtistList);
-  setFormVisible(false);
+  const handleAddingNewArtistToList = 
+  async (newArtistData) => {
+    const collectionRef = collection(db, "artists");
+  await addDoc(collectionRef, newArtistData);
+      setFormVisible(false);
 }
 
 const handleChangingSelectedArtist = (id) => {

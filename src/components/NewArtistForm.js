@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { v4 } from 'uuid'; 
 import ReusableArtistForm from "./ReusableArtistForm";
 function NewArtistForm(props){
 
@@ -10,7 +9,6 @@ function NewArtistForm(props){
       name: event.target.name.value,
       city: event.target.city.value,
       artistStyle: event.target.artistStyle.value,
-      id: v4()
     });
   }
   return(
