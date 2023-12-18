@@ -3,7 +3,7 @@ import NewArtistForm from './NewArtistForm';
 import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, onSnapshot } from "firebase/firestore";
 import db from './../firebase.js';
 
 
@@ -13,6 +13,28 @@ const [formVisible, setFormVisible] = useState(false);
 const [mainArtistList, setMainArtistList] = useState([]);
 const [selectedArtist, setSelectedArtist] = useState(null);
 const [editing, setEditing] = useState(false);
+const [error, setError] = useState(null);
+
+const unSubscribe = onSnapshot(
+  collection(db, "artists"),
+  (collectionSnapshot) => {
+    const artists = [];
+    collectionSnapshot.forEach((doc) => {
+        artists.push({
+          ... doc.data(), // Spread operator in use!
+          id: doc.id
+        });
+    });
+    setMainTicketList(artists);
+  },
+  (error) => {
+    // do something with error
+  }
+);
+return () => unSubscribe();
+}, []);
+
+
 
 
   const handleClick = () => {
@@ -100,6 +122,7 @@ const handleEditingArtistInList = (artistToEdit) => {
       <button onClick={handleClick}>{buttonText}</button>
     </React.Fragment>
   );
+  
 
 }
 
