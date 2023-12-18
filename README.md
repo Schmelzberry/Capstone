@@ -138,7 +138,9 @@ https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 
 ### Monday, 12/18
 
-12:00 Read full calendar docs again 
+12:00 Read full calendar docs again
+
+1:00 abandon calendar for now, back to coding
 ## License
 
 MIT License
