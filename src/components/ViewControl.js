@@ -5,17 +5,10 @@ import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
 
 
-function ViewControl {
+function ViewControl() {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     formVisible: false,
-  //     mainArtistList: [],
-  //     selectedArtist: null,
-  //     editing: false
-  //   };
-  // }
+const [formVisible, setFormVisible] = useState(false);
+const [mainArtistList, setMainArtistList] = useState([]);
 
   const handleClick = () => {
     if (this.state.selectedArtist != null) {
@@ -33,10 +26,9 @@ function ViewControl {
 
   const handleAddingNewArtistToList = (newArtist) => {
   const newMainArtistList = this.state.mainArtistList.concat(newArtist);
-  this.setState({
-    mainArtistList: newMainArtistList,
-    formVisible: false 
-  });
+  this.setState({mainArtistList: newMainArtistList});
+  
+  setFormVisible(false)
 }
 
 const handleChangingSelectedArtist = (id) => {
@@ -57,7 +49,7 @@ const handleEditClick = () => {
   this.setState({editing: true});
 }
 
-const handleEditingArtistInList = (artistToEdit) => {
+const handleEditingArtistinList = (artistToEdit) => {
   const editedMainArtistList = this.state.mainArtistList
     .filter(artist => artist.id !== this.state.selectedArtist.id)
     .concat(artistToEdit);
@@ -89,7 +81,7 @@ const handleEditingArtistInList = (artistToEdit) => {
        />
       buttonText = "Return to Artist List"
     }
-     else if (this.state.formVisible) {
+     else if (formVisible) {
       currentlyVisibleState = <NewArtistForm onNewArtistCreation={this.handleAddingNewArtistToList} />
       buttonText="Return to Artists";
     } 
@@ -108,4 +100,5 @@ const handleEditingArtistInList = (artistToEdit) => {
   );
 
 }
+
 export default ViewControl;
