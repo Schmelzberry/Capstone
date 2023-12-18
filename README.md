@@ -134,6 +134,8 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 
 https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 
+10:10: Adding calendar to my project, done researching
+
 ## License
 
 MIT License
