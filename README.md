@@ -128,7 +128,11 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 
 ### Sunday, 12/17
 
-9:00pm - want to have a clickable calendar that can schedule, looking at example repo from https://fullcalendar.io/ 
+9:00pm - want to have a clickable calendar that can schedule, looking at example repo from https://fullcalendar.io/
+
+9:30 - cloned down full calendar repo and following basic example @ 
+
+https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 
 ## License
 
