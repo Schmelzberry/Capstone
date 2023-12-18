@@ -126,6 +126,10 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 
 4:30 - know how to proceed tomorrow to refactor state management, followed along with help queue to figure it out.
 
+### Sunday, 12/17
+
+9:00pm - want to have a clickable calendar that can schedule, looking at example repo from https://fullcalendar.io/ 
+
 ## License
 
 MIT License
