@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import NewArtistForm from './NewArtistForm';
 import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
@@ -19,15 +19,15 @@ function ViewControl {
 
   const handleClick = () => {
     if (this.state.selectedArtist != null) {
-      this.setState({
-        formVisible: false,
-        selectedArtist: null,
-        editing: false 
-      });
+     
+        setFormVisible(false);
+        this.setState({
+          formVisible: false,
+          selectedArtist: null,
+        });
+        
     } else {
-      this.setState(prevState => ({
-        formVisible: !prevState.formVisible,
-      }));
+      setFormVisible(!formVisible);
     }
   }
 
