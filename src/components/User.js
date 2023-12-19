@@ -1,15 +1,14 @@
 import React from "react";
-import auth from './../firebase.js';
+import { auth } from './../firebase.js';
 
 
 
 function User(){
-  const name = "User#1"
 
   return(
 
     <React.Fragment>
-      <h3>User: {name}</h3>
+      <h3>User: {auth.UserInfo.displayName}</h3>
     </React.Fragment>
   )
 }
