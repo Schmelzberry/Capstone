@@ -1,6 +1,7 @@
 import React from "react";
 import Artist from "./Artist";
 import PropTypes from "prop-types";
+// import User from "./User";
 function ArtistList(props) {
   return(
     <React.Fragment>

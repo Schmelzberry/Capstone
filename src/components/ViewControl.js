@@ -7,6 +7,7 @@ import { collection, addDoc, doc, updateDoc, onSnapshot, deleteDoc } from "fireb
 import { db, auth } from './../firebase.js';
 
 
+
 function ViewControl() {
 
 const [formVisible, setFormVisible] = useState(false);
@@ -117,11 +118,13 @@ if (auth.currentUser == null) {
       buttonText="Return to Artists";
     } 
     else {
+      
       currentlyVisibleState = <ArtistList 
       artistList={mainArtistList}
       onArtistSelection={handleChangingSelectedArtist} />;
 
       buttonText="Add Artist"
+      
     }
     return(
     <React.Fragment>

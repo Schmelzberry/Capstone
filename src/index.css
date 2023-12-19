@@ -47,3 +47,32 @@ button {
 .heading {
   text-align: center;
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333; /* Add your desired background color */
+  color: white; /* Add your desired text color */
+}
+
+.header-left h1 {
+  margin: 0; /* Remove default margin for h1 */
+}
+
+.header-right ul {
+  list-style: none;
+  margin: 0; /* Remove default margin for ul */
+  padding: 0; /* Remove default padding for ul */
+}
+
+.header-right li {
+  display: inline-block;
+  margin-left: 15px; /* Adjust the margin as needed */
+}
+
+.header-right a {
+  color: white; /* Add your desired link text color */
+  text-decoration: none;
+}
