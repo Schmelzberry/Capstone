@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { auth } from "./../firebase.js";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
@@ -75,7 +75,7 @@ function SignIn() {
           placeholder='Password' />
         <button type='submit'>Sign in</button>
       </form>
-      
+
       <h1>Sign Out</h1>
       {signOutSuccess}
       <br />
