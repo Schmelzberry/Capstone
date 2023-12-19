@@ -141,6 +141,9 @@ https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 12:00 Read full calendar docs again
 
 1:00 abandon calendar for now, back to coding
+
+### Monday, 12/18
+9:30 - plan day, between new client form and adding authenticantion
 ## License
 
 MIT License
