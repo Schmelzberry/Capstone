@@ -144,6 +144,10 @@ https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 
 ### Monday, 12/18
 9:30 - plan day, between new client form and adding authenticantion
+
+9:30-12:30 coding
+
+12:30 - research alternate firebase authorization schemes
 ## License
 
 MIT License
