@@ -4,7 +4,7 @@ import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
 import { collection, addDoc, doc, updateDoc, onSnapshot, deleteDoc } from "firebase/firestore";
-import db from './../firebase.js';
+import { db } from './../firebase.js';
 
 
 function ViewControl() {
