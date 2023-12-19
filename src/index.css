@@ -27,6 +27,10 @@ input, textarea, button {
   box-sizing: border-box;
 }
 
+textarea {
+  height: 100px; /* Adjust the height according to your preference */
+}
+
 button {
   background-color: #4caf50; 
   color: white;
@@ -42,5 +46,4 @@ button {
 
 .heading {
   text-align: center;
-  
 }
