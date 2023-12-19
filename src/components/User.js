@@ -1,15 +1,17 @@
-// import React from "react";
+import React from "react";
+import auth from './../firebase.js';
 
 
-// function User(){
-//   const name = "User#1"
 
-//   return(
+function User(){
+  const name = "User#1"
 
-//     <React.Fragment>
-//       <h3>User: {name}</h3>
-//     </React.Fragment>
-//   )
-// }
+  return(
 
-// export default User;
+    <React.Fragment>
+      <h3>User: {name}</h3>
+    </React.Fragment>
+  )
+}
+
+export default User;
