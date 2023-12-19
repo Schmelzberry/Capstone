@@ -1,15 +1,15 @@
-import React from "react";
+// import React from "react";
 
 
-function User(){
-  const name = "User#1"
+// function User(){
+//   const name = "User#1"
 
-  return(
+//   return(
 
-    <React.Fragment>
-      <h3>User: {name}</h3>
-    </React.Fragment>
-  )
-}
+//     <React.Fragment>
+//       <h3>User: {name}</h3>
+//     </React.Fragment>
+//   )
+// }
 
-export default User;
+// export default User;
