@@ -45,41 +45,29 @@ function SignIn() {
   }
   return (
     <React.Fragment>
-      <h1>Sign-up to see our list of artists</h1>
-      {/* Error message, initially set to null to not show inherently show in form */}
-      {signUpSuccess}
-      <form onSubmit={doSignUp}>
-        <input 
-        type="text" 
-        name="email" 
-        placeholder="email" 
-        />
-        <input 
-        type="password" 
-        name="password" 
-        placeholder="Password" 
-        />
-        <button type="submit">Sign up</button>
-      </form>
+      <div className="auth-form-container">
+        <h1 className="auth-form-title">Sign-up to see our list of artists</h1>
+        {/* Error message, initially set to null to not show inherently show in form */}
+        {signUpSuccess}
+        <form className="auth-form" onSubmit={doSignUp}>
+          <input type="text" name="email" placeholder="email" />
+          <input type="password" name="password" placeholder="Password" />
+          <button type="submit">Sign up</button>
+        </form>
 
-      <h1>Sign In</h1>
-      {signInSuccess}
-      <form onSubmit={doSignIn}>
-        <input
-          type='text'
-          name='signinEmail'
-          placeholder='email' />
-        <input
-          type='password'
-          name='signinPassword'
-          placeholder='Password' />
-        <button type='submit'>Sign in</button>
-      </form>
+        <h1 className="auth-form-title">Sign In</h1>
+        {signInSuccess}
+        <form className="auth-form" onSubmit={doSignIn}>
+          <input type="text" name="signinEmail" placeholder="email" />
+          <input type="password" name="signinPassword" placeholder="Password" />
+          <button type="submit">Sign in</button>
+        </form>
 
-      <h1>Sign Out</h1>
-      {signOutSuccess}
-      <br />
-      <button onClick={doSignOut}>Sign out</button>
+        <h6 className="signOut">Sign Out</h6>
+        {signOutSuccess}
+        <br />
+        <button onClick={doSignOut}>Sign out</button>
+      </div>
     </React.Fragment>
   );
 }
