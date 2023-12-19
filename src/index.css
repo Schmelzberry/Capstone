@@ -57,8 +57,18 @@ button {
   color: white; /* Add your desired text color */
 }
 
+.header-left {
+  display: flex;
+  flex-direction: column; /* Adjusted to a column layout */
+  align-items: flex-start; /* Align items to the start (left) */
+}
+
 .header-left h1 {
   margin: 0; /* Remove default margin for h1 */
+}
+
+.header-left p.sub-title {
+  margin: 0; /* Remove default margin for p.sub-title */
 }
 
 .header-right ul {

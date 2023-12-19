@@ -1,11 +1,11 @@
 import React from "react";
 import Artist from "./Artist";
 import PropTypes from "prop-types";
-// import User from "./User";
+
 function ArtistList(props) {
   return(
     <React.Fragment>
-      <h2 class="heading">Artist List</h2>
+      <h2 className="heading">Artist List</h2>
       
       {props.artistList.map((artist) =>
 

@@ -127,10 +127,9 @@ if (auth.currentUser == null) {
       
     }
     return(
-    <React.Fragment>
+      <React.Fragment>
       {currentlyVisibleState}
-      <button onClick={handleClick}>{buttonText}</button>
-      {error ? null : <button onClick={handleClick}>{buttonText}</button>}
+      {!error && <button onClick={handleClick}>{buttonText}</button>}
     </React.Fragment>
   );
   

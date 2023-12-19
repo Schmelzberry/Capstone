@@ -7,7 +7,8 @@ function Header() {
     <React.Fragment>
       <header className="header-container">
         <div className="header-left">
-          <h1>Ohp - Connecting Tattoo Artists & Clients</h1>
+          <h1>Ohp</h1><br></br>
+          <p className="sub-title">Connecting Tattoo Artists & Clients</p>
         </div>
         <div className="header-right">
           <ul>

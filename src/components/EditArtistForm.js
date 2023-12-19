@@ -19,7 +19,7 @@ function EditArtistForm(props) {
 
   return (
     <React.Fragment>
-      <h2 class="heading">Edit Artist Info</h2>
+      <h2 className="heading">Edit Artist Info</h2>
       <ReusableArtistForm
       formSubmissionHandler={handleEditArtistFormSubmission}
         buttonText="Update Artist"

@@ -7,7 +7,7 @@
 // function UserList(props) {
 //   return(
 //     <React.Fragment>
-//       <h2 class="heading">User List</h2>
+//       <h2 className="heading">User List</h2>
       
 //       {props.userList.map((user) =>
 
