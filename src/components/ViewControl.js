@@ -22,7 +22,7 @@ const unSubscribe = onSnapshot(
     const artists = [];
     collectionSnapshot.forEach((doc) => {
         artists.push({
-          ... doc.data(), // Spread operator in use!
+          ...doc.data(), 
           id: doc.id
         });
     });

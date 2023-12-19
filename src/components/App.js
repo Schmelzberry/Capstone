@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import SignIn from "./SignIn";
 import ViewControl from "./ViewControl";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -8,13 +9,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-    <React.Fragment>
-      <Routes>
-        <Route path="/sign-in" element={<SignIn />}
       <Header />
-      <ViewControl />
+      <Routes>
+        {/* ROUTES */}
+        <Route path="/sign-in" element={<SignIn 
+        />} />
+
+        <Route path="/" element={<ViewControl 
+        />} />
+    
       </Routes>
-    </React.Fragment>
     </Router>
   );
 }
