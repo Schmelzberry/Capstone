@@ -21,6 +21,9 @@ function Header() {
             <li>
               <Link to="/user">User Info</Link>
             </li>
+            <li>
+              <Link to="/album">Tattoo Example</Link>
+            </li>
 
             {/* Add more links as needed */}
           </ul>

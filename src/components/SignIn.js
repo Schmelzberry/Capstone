@@ -50,7 +50,7 @@ function SignIn() {
       <div className="auth-form-container">
 
         {/* SIGN UP FORM  */}
-        <h1 className="auth-form-title">Account Information</h1>
+        <h1 className="auth-form-title">Sign-up</h1>
         {/* Error message, initially set to null to not show inherently show in form */}
         {!userIsSignedIn && (
           <>
