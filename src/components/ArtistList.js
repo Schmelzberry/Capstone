@@ -20,7 +20,6 @@ function ArtistAccordion({ artist, onArtistSelection }) {
           name={artist.name}
           city={artist.city}
           artistStyle={artist.artistStyle}
-          available={artist.available}
           id={artist.id}
         />
       </AccordionDetails>
