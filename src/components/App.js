@@ -16,8 +16,9 @@ function App() {
         <Route path="/sign-in" element={<SignIn 
         />} />
 
-        <Route path="/create" element={<CreateAccount 
+        <Route path="/user" element={<CreateAccount 
         />} />
+
         <Route path="/" element={<ViewControl 
         />} />
     
