@@ -148,6 +148,10 @@ https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 9:30-12:30 coding
 
 12:30 - research alternate firebase authorization schemes
+
+code from 12:30 - 4:30
+
+* Tomorrow plan - build out user component and allow artists to add past work in a portfolio component
 ## License
 
 MIT License
