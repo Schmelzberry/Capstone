@@ -1,46 +1,46 @@
-import React, { useEffect, useState } from "react";
-import { auth, db } from './../firebase.js';
+// import React, { useEffect, useState } from "react";
+// import { auth, db } from './../firebase.js';
 
-function User() {
-  const [userInfo, setUserInfo] = useState(null);
+// function User() {
+//   const [userInfo, setUserInfo] = useState(null);
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      if (auth.currentUser && db)  {
-        const userId = auth.currentUser.uid;
-        try {
-          const userDoc = await db.collection("users").doc(userId).get();
-          if (userDoc.exists) {
-            setUserInfo(userDoc.data());
-          } else {
-            console.log("User document not found");
-          }
-        } catch (error) {
-          console.error("Error fetching user data", error);
-        }
-      }
-    };
+//   useEffect(() => {
+//     const fetchUserData = async () => {
+//       if (auth.currentUser && db)  {
+//         const userId = auth.currentUser.uid;
+//         try {
+//           const userDoc = await db.collection("users").doc(userId).get();
+//           if (userDoc.exists) {
+//             setUserInfo(userDoc.data());
+//           } else {
+//             console.log("User document not found");
+//           }
+//         } catch (error) {
+//           console.error("Error fetching user data", error);
+//         }
+//       }
+//     };
 
-    fetchUserData();
-  }, [auth.currentUser, db]); 
+//     fetchUserData();
+//   }, [auth.currentUser, db]); 
 
-  return (
-    <React.Fragment>
-      {userInfo ? (
-        <div>
-          <h3>Username: {userInfo.displayName}</h3>
-          <h3>Email: {userInfo.email}</h3>
-          <h3>Photo: {userInfo.photoURL}</h3>
-          <h3>UserId: {userInfo.uid}</h3>
-        </div>
-      ) : (
-        <p>Loading user data...</p>
-      )}
-    </React.Fragment>
-  );
-}
+//   return (
+//     <React.Fragment>
+//       {userInfo ? (
+//         <div>
+//           <h3>Username: {userInfo.displayName}</h3>
+//           <h3>Email: {userInfo.email}</h3>
+//           <h3>Photo: {userInfo.photoURL}</h3>
+//           <h3>UserId: {userInfo.uid}</h3>
+//         </div>
+//       ) : (
+//         <p>Loading user data...</p>
+//       )}
+//     </React.Fragment>
+//   );
+// }
 
-export default User;
+// export default User;
 
 
 

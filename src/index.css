@@ -20,15 +20,15 @@ form {
   align-items: center;
 }
 
-input, textarea, button {
+ input, textarea, button {
   margin-bottom: 10px; 
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-}
+} 
 
 textarea {
-  height: 100px; /* Adjust the height according to your preference */
+  height: 100px; 
 }
 
 button {
@@ -42,7 +42,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-}
+} 
 
 .heading {
   text-align: center;

@@ -18,11 +18,11 @@ function Header() {
             <li>
               <Link to="/sign-in">Log-in</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/user">User Info</Link>
-            </li>
+            </li> */}
             <li>
-              <Link to="/album">Tattoo Example</Link>
+              <Link to="/album">Designs</Link>
             </li>
 
             {/* Add more links as needed */}
