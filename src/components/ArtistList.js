@@ -6,6 +6,8 @@ function ArtistList(props) {
   return(
     <React.Fragment>
       <h2 className="heading">Artist List</h2>
+      <p className="heading">Take a look at local tattoo artists below. Each individual has a unique approach, style, and price. Spend some time checking out local artists below to see if someone is available who can deliver the design you're looking for! </p>
+      <hr/>
       
       {props.artistList.map((artist) =>
 
