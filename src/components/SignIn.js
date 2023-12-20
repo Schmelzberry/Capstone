@@ -8,6 +8,8 @@ function SignIn() {
   const [signInSuccess, setSignInSuccess] = useState(null);
   const [signOutSuccess, setSignOutSuccess] = useState(null);
 
+  const userIsSignedIn = auth.currentUser !== null;
+
 
   function doSignUp(event) {
     event.preventDefault();
@@ -46,27 +48,34 @@ function SignIn() {
   return (
     <React.Fragment>
       <div className="auth-form-container">
+
+        {/* SIGN UP FORM  */}
         <h1 className="auth-form-title">Sign-up to see our list of artists</h1>
         {/* Error message, initially set to null to not show inherently show in form */}
+        {!userIsSignedIn && (
+          <>
         {signUpSuccess}
         <form className="auth-form" onSubmit={doSignUp}>
           <input type="text" name="email" placeholder="email" />
           <input type="password" name="password" placeholder="Password" />
           <button type="submit">Sign up</button>
         </form>
+        </>
+        )}
 
-        <h1 className="auth-form-title">Sign In</h1>
+        {/* SIGN IN FORM  */}
+        <h1 className="auth-form-title">Sign-In</h1>
         {signInSuccess}
         <form className="auth-form" onSubmit={doSignIn}>
           <input type="text" name="signinEmail" placeholder="email" />
           <input type="password" name="signinPassword" placeholder="Password" />
-          <button type="submit">Sign in</button>
+          <button type="submit">Sign-in</button>
         </form>
-
-        <h6 className="signOut">Sign Out</h6>
+          {/* SIGN OUT BUTTON  */}
+  
         {signOutSuccess}
         <br />
-        <button onClick={doSignOut}>Sign out</button>
+        <button onClick={doSignOut}>Sign-out</button>
       </div>
     </React.Fragment>
   );
