@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { auth, firestore } from './../firebase.js';
+import { auth, db } from './../firebase.js';
 
 function User() {
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
     const fetchUserData = async () => {
-      if (auth.currentUser) {
+      if (auth.currentUser && db)  {
         const userId = auth.currentUser.uid;
         try {
-          const userDoc = await firestore.collection("users").doc(userId).get();
+          const userDoc = await db.collection("users").doc(userId).get();
           if (userDoc.exists) {
             setUserInfo(userDoc.data());
           } else {
@@ -22,7 +22,7 @@ function User() {
     };
 
     fetchUserData();
-  }, []);
+  }, [auth.currentUser, db]); 
 
   return (
     <React.Fragment>
