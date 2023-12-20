@@ -71,14 +71,21 @@ button {
   margin: 0; /* Remove default margin for p.sub-title */
 }
 
+/* RIGHT SIDE OF HEADER */
+.header-right {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
 .header-right ul {
   list-style: none;
   margin: 0; /* Remove default margin for ul */
   padding: 0; /* Remove default padding for ul */
+  display: flex;
 }
 
 .header-right li {
-  display: inline-block;
+  /* display: inline-block; */
   margin-left: 15px; /* Adjust the margin as needed */
 }
 
@@ -87,6 +94,12 @@ button {
   text-decoration: none;
 }
 
+.header-right img {
+  margin-left: 15px; /* Adjust the margin as needed */
+  width: 60px; /* Set the width of the image */
+  height: auto; /* Maintain the aspect ratio */
+}
+/* USER FORMS */
 .auth-form-container {
   max-width: 500px;
   margin: 0 auto;
@@ -123,8 +136,5 @@ button {
   background-color: #45a049;
 }
 
-.header-right img {
-  margin-left: 15px; /* Adjust the margin as needed */
-  width: 60px; /* Set the width of the image */
-  height: auto; /* Maintain the aspect ratio */
-}
+
+

@@ -7,7 +7,7 @@ function Header() {
     <React.Fragment>
       <header className="header-container">
         <div className="header-left">
-          <h1>Ohp</h1><br></br>
+          <h1><em>Ohp</em></h1>
           <p className="sub-title">Connecting Tattoo Artists & Clients</p>
         </div>
         <div className="header-right">
@@ -16,10 +16,10 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/sign-in">Sign In</Link>
+              <Link to="/sign-in">Log-in</Link>
             </li>
             <li>
-              <Link to="/user">User</Link>
+              <Link to="/user">User Info</Link>
             </li>
 
             {/* Add more links as needed */}

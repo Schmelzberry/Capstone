@@ -16,7 +16,7 @@ function NewArtistForm(props){
       <h2 className="heading">Add New Artist Below</h2>
         <ReusableArtistForm
         formSubmissionHandler={handleNewArtistFormSubmission}
-        buttonText="Add Me!" />
+        buttonText="Send 'Er" />
     </React.Fragment>
   )
 }
