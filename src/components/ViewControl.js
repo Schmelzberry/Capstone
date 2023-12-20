@@ -5,7 +5,7 @@ import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
 import { collection, addDoc, doc, updateDoc, onSnapshot, deleteDoc } from "firebase/firestore";
 import { db, auth } from './../firebase.js';
-
+import { Link } from "react-router-dom";
 
 
 function ViewControl() {
@@ -111,6 +111,7 @@ if (auth.currentUser == null) {
       onClickingDelete = {handleDeletingArtist}
       onClickingEdit = {handleEditClick}
        />
+  
       buttonText = "Return to Artist List"
     }
      else if (formVisible) {

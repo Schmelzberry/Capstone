@@ -14,22 +14,22 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Ohp - Tattoo Scheduling
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+// function Copyright() {
+//   return (
+//     <Typography variant="body2" color="text.secondary" align="center">
+//       {'Copyright © '}
+//       <Link color="inherit" href="https://mui.com/">
+//         Ohp - Tattoo Scheduling
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//   );
+// }
 
 const cards = [1, 2, 3, 4, 5, 6,];
 
-// TODO remove, this demo shouldn't need to reset the theme.
+
 const defaultTheme = createTheme();
 
 export default function Album() {
@@ -67,7 +67,6 @@ export default function Album() {
               justifyContent="center"
             >
               <Button variant="contained">Book Appointment</Button>
-              <Button variant="outlined">Redirect to Home Page</Button>
             </Stack>
           </Container>
         </Box>
@@ -99,7 +98,7 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">Details</Button>
+                    <Button size="small">Details(static)</Button>
                   </CardActions>
                 </Card>
               </Grid>

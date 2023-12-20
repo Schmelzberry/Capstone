@@ -12,9 +12,9 @@ function ArtistDetail(props) {
       <h1>{artist.name}</h1>
       <h3>Currently working in: {artist.city}</h3>
       <h3>Style: {artist.artistStyle}</h3>
+      <h3>Available: {artist.available}</h3>
       <button onClick={ props.onClickingEdit }>Update Artist</button>
       <button onClick={() => onClickingDelete(artist.id) }>Delete Artist</button>
-      < hr />
     </React.Fragment>
   );
 }
