@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./../index.css"
-import User from "./User";
 
 function Header() {
   return (
@@ -18,6 +17,9 @@ function Header() {
             </li>
             <li>
               <Link to="/sign-in">Sign In</Link>
+            </li>
+            <li>
+              <Link to="/user">User</Link>
             </li>
 
             {/* Add more links as needed */}
