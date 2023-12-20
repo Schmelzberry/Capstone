@@ -24,11 +24,14 @@ function Header() {
 
             {/* Add more links as needed */}
           </ul>
+          <img src={process.env.PUBLIC_URL + '/assets/skull.png'} alt="header img" />
         </div>
       </header>
       <hr />
     </React.Fragment>
   );
 }
+
+
 
 export default Header;

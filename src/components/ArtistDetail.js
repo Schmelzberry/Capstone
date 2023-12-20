@@ -9,9 +9,9 @@ function ArtistDetail(props) {
 
   return (
     <React.Fragment>
-      <h1>{artist.name} Info</h1>
-      <h3>{artist.city}</h3>
-      <h3>{artist.artistStyle}</h3>
+      <h1>{artist.name}</h1>
+      <h3>Currently working in: {artist.city}</h3>
+      <h3>Style: {artist.artistStyle}</h3>
       <button onClick={ props.onClickingEdit }>Update Artist</button>
       <button onClick={() => onClickingDelete(artist.id) }>Delete Artist</button>
       < hr />

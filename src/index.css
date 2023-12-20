@@ -122,3 +122,9 @@ button {
 .auth-form button:hover {
   background-color: #45a049;
 }
+
+.header-right img {
+  margin-left: 15px; /* Adjust the margin as needed */
+  width: 60px; /* Set the width of the image */
+  height: auto; /* Maintain the aspect ratio */
+}

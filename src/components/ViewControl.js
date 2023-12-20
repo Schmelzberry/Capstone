@@ -84,7 +84,7 @@ const handleEditingArtistInList = async (artistToEdit) => {
 if (auth.currentUser == null) {
   return (
     <React.Fragment>
-      <h1>You must be signed in to access artists!</h1>
+      <h1>Please create an account or sign in to see a list of local tattoo artists!</h1>
     </React.Fragment>
   )
 } else if (auth.currentUser != null) {
