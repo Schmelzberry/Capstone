@@ -32,6 +32,7 @@ These are a WIP as the project packages and dependencies change, but for now...
 ## Known Bugs
 
 * Full calendar bug - had success creating full calendar in a webpack environment but not in actual project installing via CDN.
+* Loading User Information - collection is coming back null when trying to pull user data.
 
 
 ## Research & Planning Log
@@ -155,7 +156,9 @@ code from 12:30 - 4:30
 
 ### Tuesday, 12/18
 
-* Pivot from styling to planning for tomorrow and organizing README
+* 5:30 Pivot from styling to planning for tomorrow and organizing README
+
+* EOD, start with artist appointments tomorrow, then try and tackle user data?
 ## License
 
 MIT License
