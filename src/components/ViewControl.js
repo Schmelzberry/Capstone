@@ -3,6 +3,7 @@ import NewArtistForm from './NewArtistForm';
 import ArtistList from './ArtistList';
 import ArtistDetail from './ArtistDetail';
 import EditArtistForm from './EditArtistForm';
+import HeroPage from './Hero.js'
 import { collection, addDoc, doc, updateDoc, onSnapshot, deleteDoc } from "firebase/firestore";
 import { db, auth } from './../firebase.js';
 import { Link } from "react-router-dom";
@@ -83,9 +84,7 @@ const handleEditingArtistInList = async (artistToEdit) => {
  
 if (auth.currentUser == null) {
   return (
-    <React.Fragment>
-      <h1>Please create an account or sign in to see a list of local tattoo artists!</h1>
-    </React.Fragment>
+      <HeroPage />
   )
 } else if (auth.currentUser != null) {
 
