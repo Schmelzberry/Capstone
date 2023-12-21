@@ -61,6 +61,7 @@ export default function Album() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
              A library of potential designs to get zapped onto your body, for eternity.
             </Typography>
+            
             <Stack
               sx={{ pt: 4 }}
               direction="row"
@@ -87,17 +88,17 @@ export default function Album() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image="/assets/king.png"
+                    image="/assets/mom.png"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Crowned Skull
+                      Love Mom Design
                     </Typography>
                     <Typography>
-                      Estimated Time: 3-4 hours
+                      Estimated Time: 1-3 hours
                     </Typography>
                     <Typography>
-                      Customizable: Nah dawg
+                      Customizable: Nah, dawg
                     </Typography>
                   </CardContent>
                   <CardActions>

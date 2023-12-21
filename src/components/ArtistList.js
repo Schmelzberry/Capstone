@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+
 function ArtistAccordion({ artist, onArtistSelection }) {
   return (
     <Accordion>
@@ -31,9 +32,11 @@ function ArtistList({ artistList, onArtistSelection }) {
   return (
     <div style={{ width: '75%', margin: '0 auto' }}> {/* Set the width to 50% */}
       <React.Fragment>
-        <h2 className="heading">Artist List</h2>
+      <h2 className="heading">Artist List</h2>
+      
+        
         <p className="heading">Take a look at local tattoo artists below. Each individual has a unique approach, style, and price. Spend some time checking out local artists below to see if someone is available who can deliver the design you're looking for! </p>
-        <hr />
+      
 
         {artistList.map((artist) => (
           <ArtistAccordion

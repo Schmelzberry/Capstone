@@ -22,7 +22,7 @@ const HeroPage = () => {
           spacing={2}
           sx={{ color: 'text.primary', textAlign: 'center', height: '100%', width: '100%' }}
         >
-          <Typography variant="h1" component="div">
+           <Typography variant="h1" component="div" sx={{ fontSize: '10rem', marginBottom: '60px' }}>
             Ohp
           </Typography>
           <CardMedia

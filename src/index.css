@@ -140,7 +140,7 @@ button {
 }
 
 .auth-form button:hover {
-  background-color: #45a049;
+  background-color: rgb(21, 105, 189);
 }
 
 .add-artist-button {
