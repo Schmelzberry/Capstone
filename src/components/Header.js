@@ -16,11 +16,11 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
+              <Link to="/view-control">Artists</Link>
+            </li>
+            <li>
               <Link to="/sign-in">Log-in</Link>
             </li>
-            {/* <li>
-              <Link to="/user">User Info</Link>
-            </li> */}
             <li>
               <Link to="/album">Designs</Link>
             </li>
