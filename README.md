@@ -10,10 +10,10 @@
 - React 
 - Node 
 - npm 
-- Firebase 
-- Firestore
+- Firebase/Firestore
 - CSS
 - HTML
+- Material UI
 
 ## Description
 React SPA for connecting tattoo artists and their clients.
