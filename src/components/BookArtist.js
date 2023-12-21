@@ -1,43 +1,61 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import CardMedia from '@mui/material/CardMedia';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import { Typography } from '@mui/material';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import CardMedia from "@mui/material/CardMedia";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Slider from "@mui/material/Slider";
+import { Typography } from "@mui/material";
+import { styled } from '@mui/system';
+
+const StyledSlider = styled(Slider)({
+  width: '50%',
+  marginTop: '20px',
+});
+
 
 export default function ComposedTextField() {
+  const [sliderValue, setSliderValue] = React.useState(50);
+
+
+  const handleSliderChange = (event, newValue) => {
+    setSliderValue(newValue);
+  };
+
+  const marks = Array.from({ length: 10 }, (_, index) => ({
+    value: index + 1,
+    label: (index + 1).toString(),
+  }));
+
+  
+
   return (
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1 },
+        "& > :not(style)": { m: 1 },
         p: 2, // p = padding
-        border: '1px solid #ccc',
-        display: 'flex',
-        flexDirection: 'column', // display items in a column layout
-        alignItems: 'center',
-        
+        border: "1px solid #ccc",
+        display: "flex",
+        flexDirection: "column", // display items in a column layout
+        alignItems: "center",
       }}
       noValidate
       autoComplete="off"
     >
-
-<CardMedia
+      <CardMedia
         component="img"
         alt="Form Image"
         height="300"
-        image={process.env.PUBLIC_URL + '/assets/tattoo.jpg'}
-        sx={{ width: '100%', objectFit: 'cover' }} // Set image width and maintain aspect ratio
+        image={process.env.PUBLIC_URL + "/assets/tattoo.jpg"}
+        sx={{ width: "100%", objectFit: "cover" }} // Set image width and maintain aspect ratio
       />
-    
-      <Typography>
-        Looking to get some work done?
-      </Typography>
-      <Typography>
-        Fill out the form below!
-      </Typography>
+
+      {/* FORM */}
+      <Typography>Looking to get some work done?</Typography>
+      <Typography>Fill out the form below!</Typography>
+
       <FormControl>
         <InputLabel htmlFor="component-outlined">First Name</InputLabel>
         <OutlinedInput
@@ -70,10 +88,23 @@ export default function ComposedTextField() {
           label="Name"
         />
       </FormControl>
-      <Button variant="contained" sx={{ width: '15%', marginTop: '20px' }}>
-    Submit
-  </Button>
-   
+      <Typography>How stoked are you?</Typography>
+
+      {/* SLIDER */}
+      <StyledSlider
+        value={sliderValue}
+        onChange={handleSliderChange}
+        aria-labelledby="continuous-slider"
+        marks={marks}
+        step={1}
+        valueLabelDisplay="on" // Display value label
+        valueLabelFormat={(value) => value.toString()} // Format the value label
+      />
+
+
+      <Button variant="contained" sx={{ width: "15%", marginTop: "20px" }}>
+        Submit
+      </Button>
     </Box>
   );
 }
