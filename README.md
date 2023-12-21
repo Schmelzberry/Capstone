@@ -152,6 +152,10 @@ https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 code from 12:30 - 4:30
 
 * Tomorrow plan - build out user component and allow artists to add past work in a portfolio component
+
+### Tuesday, 12/18
+
+* Pivot from styling to planning for tomorrow and organizing README
 ## License
 
 MIT License
