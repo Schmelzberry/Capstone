@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -66,7 +67,9 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
+              <Link to="/book-artist" component={RouterLink}>
               <Button variant="contained">Book Appointment</Button>
+              </Link>
             </Stack>
           </Container>
         </Box>

@@ -31,7 +31,7 @@ textarea {
 }
 
 button {
-  background-color: #4caf50; 
+  background-color: rgb(20, 94, 168); 
   color: white;
   border: none;
   padding: 15px 20px;
@@ -132,7 +132,7 @@ button {
 .auth-form button {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: rgb(20, 94, 168);
   color: white;
   border: none;
   border-radius: 5px;
