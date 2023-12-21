@@ -110,7 +110,7 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 ```
 
 ### Friday, 12/15
-
+```
 8:15: Look at Material UI documentation - DataGrid was very helpful on past project
 
 9:00: Back to coding project, Material UI will need to come later after i'm closer to MVP
@@ -154,11 +154,14 @@ code from 12:30 - 4:30
 
 * Tomorrow plan - build out user component and allow artists to add past work in a portfolio component
 
-### Tuesday, 12/18
+```
 
+### Tuesday, 12/18
+```
 * 5:30 Pivot from styling to planning for tomorrow and organizing README
 
 * EOD, start with artist appointments tomorrow, then try and tackle user data?
+```
 ## License
 
 MIT License
