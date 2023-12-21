@@ -7,8 +7,17 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from "react-router-dom";
+import { styled } from '@mui/system';
 
 const theme = createTheme();
+
+const StyledCardMedia = styled(CardMedia)({
+  width: '100%',
+  objectFit: 'cover',
+  border: '3px solid lightblue', // Add a light blue border
+  borderRadius: '5px', // Add border-radius for a rounded border
+  boxShadow: '0 0 5px black', // Add a black accent border using box-shadow
+});
 
 const HeroPage = () => {
   return (
@@ -22,10 +31,10 @@ const HeroPage = () => {
           spacing={2}
           sx={{ color: 'text.primary', textAlign: 'center', height: '100%', width: '100%' }}
         >
-           <Typography variant="h1" component="div" sx={{ fontSize: '10rem', marginBottom: '60px' }}>
+           <Typography variant="h1" component="div" sx={{ fontSize: '10rem', marginBottom: '60px', color:"rgb(21, 105, 189)" }}>
             Ohp
           </Typography>
-          <CardMedia
+          <StyledCardMedia
             component="img"
             alt="Tattoo Image"
             height="360"

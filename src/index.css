@@ -52,65 +52,74 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #333; /* Add your desired background color */
-  color: white; /* Add your desired text color */
+  background-color: #101113;
+  color: rgb(20, 94, 168);
+  border: 2px solid lightblue; /* Add a light blue border */
+  border-radius: 5px; /* Add border-radius for a rounded border */
+  box-shadow: 0 0 5px black; /* Add a black accent border using box-shadow */
 }
 
 .header-left {
   display: flex;
-  flex-direction: column; /* Adjusted to a column layout */
-  align-items: flex-start; /* Align items to the start (left) */
+  flex-direction: column; 
+  align-items: flex-start; 
 }
 
 .header-left h1 {
-  margin: 0; /* Remove default margin for h1 */
+  margin: 0; 
 }
 
 .header-left p.sub-title {
-  margin: 0; /* Remove default margin for p.sub-title */
+  margin: 0; 
 }
 
 /* RIGHT SIDE OF HEADER */
 .header-right {
   display: flex;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center; 
 }
 
 .header-right ul {
   list-style: none;
-  margin: 0; /* Remove default margin for ul */
-  padding: 0; /* Remove default padding for ul */
+  margin: 0; 
+  padding: 0;
   display: flex;
 }
 
 .header-right li {
-  /* display: inline-block; */
-  margin-left: 15px; /* Adjust the margin as needed */
+  
+  margin-left: 15px; 
+  
 }
 
 .header-right a {
   color: white;
   text-decoration: none;
-  padding: 10px 15px; /* Adjust padding as needed */
-  border: 2px solid rgb(0, 0, 0); /* Add a border */
+  padding: 10px 15px; 
+  border: 2px solid rgb(0, 0, 0); 
   border-radius: 5px;
-  transition: background-color 0.3s ease; /* Add a smooth transition */
+  transition: background-color 0.3s ease; /* smooth transition */
+  color: rgb(20, 94, 168);
 }
 
 .header-right a:hover {
-  background-color: #222020; /* Change background color on hover */
+  background-color: #222020; 
 }
 
 .header-right img {
-  margin-left: 15px; /* Adjust the margin as needed */
-  width: 60px; /* Set the width of the image */
-  height: auto; /* Maintain the aspect ratio */
+  margin-left: 15px; 
+  width: 60px; 
+  height: auto; 
 }
 /* USER FORMS */
 .auth-form-container {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #222020;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
 }
 
 .auth-form-title {
@@ -121,6 +130,11 @@ button {
 .auth-form {
   display: flex;
   flex-direction: column;
+}
+
+.auth-form .error-message {
+  text-align: center;
+  color: red; /* You can choose your desired color for error messages */
 }
 
 .auth-form input {
@@ -144,11 +158,21 @@ button {
 }
 
 .add-artist-button {
-  /* Your custom styles for the button go here */
   width: 20%;
   display: flex;
   align-self: center;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.artist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-artist-button {
+  width: 15%; /* Set the button width to 15% */
+  margin-top: 20px;
 }

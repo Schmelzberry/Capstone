@@ -9,10 +9,13 @@ import Slider from "@mui/material/Slider";
 import { Typography } from "@mui/material";
 import { styled } from '@mui/system';
 
-const StyledSlider = styled(Slider)({
+const StyledSlider = styled(Slider)(({ theme }) => ({
   width: '50%',
   marginTop: '20px',
-});
+  '& .MuiSlider-mark': {
+    display: 'none', // Hide the marks
+  },
+}));
 
 
 export default function ComposedTextField() {
@@ -92,14 +95,14 @@ export default function ComposedTextField() {
 
       {/* SLIDER */}
       <StyledSlider
-        value={sliderValue}
-        onChange={handleSliderChange}
-        aria-labelledby="continuous-slider"
-        marks={marks}
-        step={1}
-        valueLabelDisplay="on" // Display value label
-        valueLabelFormat={(value) => value.toString()} // Format the value label
-      />
+  value={sliderValue}
+  onChange={handleSliderChange}
+  aria-labelledby="continuous-slider"
+  marks={marks}
+  step={1}
+  valueLabelDisplay="no" // Display value label
+  valueLabelFormat={(value) => value.toString()} // Format the value label
+/>
 
 
       <Button variant="contained" sx={{ width: "15%", marginTop: "20px" }}>
