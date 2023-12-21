@@ -1,10 +1,12 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import CardMedia from '@mui/material/CardMedia';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link } from "react-router-dom";
 
 const theme = createTheme();
 
@@ -20,15 +22,23 @@ const HeroPage = () => {
           spacing={2}
           sx={{ color: 'text.primary', textAlign: 'center', height: '100%', width: '100%' }}
         >
-          <Typography variant="h2" component="div">
-            Welcome to Ohp
+          <Typography variant="h1" component="div">
+            Ohp
           </Typography>
+          <CardMedia
+            component="img"
+            alt="Tattoo Image"
+            height="360"
+            image={process.env.PUBLIC_URL + '/assets/tattoo.jpg'}
+          />
           <Typography variant="h5" component="div">
            Connect with local tattoo professionals
           </Typography>
-          <Button variant="contained" color="primary">
-            Get Started
-          </Button>
+          <Link to="/sign-in"> {/* Use Link component to navigate to /sign-in */}
+            <Button variant="contained" color="primary">
+              Create account
+            </Button>
+          </Link>
         </Stack>
       </Container>
     </ThemeProvider>

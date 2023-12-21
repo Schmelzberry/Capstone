@@ -124,13 +124,13 @@ if (auth.currentUser == null) {
       artistList={mainArtistList}
       onArtistSelection={handleChangingSelectedArtist} />;
 
-      buttonText="Add Artist"
+      buttonText="Add New Artist"
       
     }
     return(
       <React.Fragment>
       {currentlyVisibleState}
-      {!error && <button onClick={handleClick}>{buttonText}</button>}
+      {!error && <button className="add-artist-button" onClick={handleClick}>{buttonText}</button>}
     </React.Fragment>
   );
   

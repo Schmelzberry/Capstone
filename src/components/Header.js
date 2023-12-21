@@ -19,7 +19,7 @@ function Header() {
               <Link to="/view-control">Artists</Link>
             </li>
             <li>
-              <Link to="/sign-in">Log-in</Link>
+              <Link to="/sign-in">Account</Link>
             </li>
             <li>
               <Link to="/album">Designs</Link>
@@ -30,7 +30,7 @@ function Header() {
           <img src={process.env.PUBLIC_URL + '/assets/skull.png'} alt="header img" />
         </div>
       </header>
-      <hr />
+      
     </React.Fragment>
   );
 }

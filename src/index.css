@@ -143,5 +143,12 @@ button {
   background-color: #45a049;
 }
 
-
-
+.add-artist-button {
+  /* Your custom styles for the button go here */
+  width: 20%;
+  display: flex;
+  align-self: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
