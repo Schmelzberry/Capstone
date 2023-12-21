@@ -157,22 +157,23 @@ button {
   background-color: rgb(21, 105, 189);
 }
 
-.add-artist-button {
-  width: 20%;
-  display: flex;
-  align-self: center;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .artist-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.add-artist-button {
-  width: 15%; /* Set the button width to 15% */
+.add-artist-button-container {
+  width: 15%; /* Set a fixed width for the container */
   margin-top: 20px;
+}
+
+.add-artist-button {
+  width: 100%; /* Make the button take 100% of the container width */
+  padding: 10px;
+  background-color: rgb(20, 94, 168);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

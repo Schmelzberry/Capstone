@@ -9,6 +9,14 @@ import Slider from "@mui/material/Slider";
 import { Typography } from "@mui/material";
 import { styled } from '@mui/system';
 
+const StyledCardMedia = styled(CardMedia)({
+  width: "100%",
+  objectFit: "cover",
+  border: "3px solid lightblue", // Add a light blue border
+  borderRadius: "5px", // Add border-radius for a rounded border
+  boxShadow: "0 0 5px black", // Add a black accent border using box-shadow
+});
+
 const StyledSlider = styled(Slider)(({ theme }) => ({
   width: '50%',
   marginTop: '20px',
@@ -47,7 +55,7 @@ export default function ComposedTextField() {
       noValidate
       autoComplete="off"
     >
-      <CardMedia
+      <StyledCardMedia
         component="img"
         alt="Form Image"
         height="300"
