@@ -1,6 +1,6 @@
-# Ohp - Tattoo Scheduling
+# Ohp
 
-#### A simple React application that connects tattoo artists with clients
+#### React application that connects tattoo artists with clients. Uses Firebase for the backend.
 
 #### By Jake Elsberry
 
@@ -16,23 +16,104 @@
 - Material UI
 
 ## Description
-React SPA for connecting tattoo artists and their clients.
+Ohp is intended to connect those looking to get a tattoo with an artist who is available to work. Users can create an account and see a list of artists, look at past work, and book an appointment(WIP).
 
 ## Setup & Installation
-
-These are a WIP as the project packages and dependencies change, but for now...
-
-
 * Clone repository at https://github.com/Schmelzberry/Capstone
 
-* from project directory, install necessary packages with ```$ npm install```
+### Firebase 
+
+Step 1:
+* Create Firebase Account for hosting database here. https://firebase.google.com/
+* Create a Firebase Project. Go to the Firebase Console.
+Click on the "Add Project" button.
+* Enter a name for your project and choose your country/region. Click "Next."
+* Review your project configuration and click "Create Project."
+
+Step 2: 
+* Enable Authentication
+In the Firebase Console, click on "Authentication" in the left menu.
+
+* Choose the "Sign-in method" tab.
+Enable the authentication methods you want to use (Email/Password, Google).
+* Configure each authentication method and save the changes.
+
+Step 3:
+
+* Set Up Your Web Application
+In the Firebase Console, click on the gear icon and select "Project Settings."
+
+* In the General tab, scroll down to the "Your apps" section.
+
+* Click on the "</>" icon to add a new app to your project.
+
+* Register your app by providing a nickname (e.g., Ohp) and click "Register App."
+
+* Copy the Firebase SDK configuration code snippet. It looks like this:
+
+
+```
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+```
+* Copy the Firebase SDK values into the values below, then create a .env file(add it to .gitignore and save file in order to ignore sensitive info)
+
+* The .env file should look as such with your personal values pasted on the right side of the equal sign, replacing the words "YOUR_API_KEY.
+```
+REACT_APP_FIREBASE_API_KEY = "YOUR_API_KEY"
+REACT_APP_FIREBASE_AUTH_DOMAIN = "YOUR_AUTH_DOMAIN"
+REACT_APP_FIREBASE_PROJECT_ID = "YOUR_PROJECT_ID"
+REACT_APP_FIREBASE_STORAGE_BUCKET = "YOUR_STORAGE_BUCKET"
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = "YOUR_MESSAGING_SENDER_ID"
+REACT_APP_FIREBASE_APP_ID = "YOUR_APP_ID"
+```
+### Run Project
+* Now that firebase is installed, we can run the project. 
+
+* Navigate to topmost folder in project directory, install necessary packages with ```$ npm install```
 
 * run project in local web browser with ```$ npm run start```
 
 ## Known Bugs
 
-* Full calendar bug - had success creating full calendar in a webpack environment but not in actual project installing via CDN.
+
 * Loading User Information - collection is coming back null when trying to pull user data.
+
+* When editing information, existing values don't populate text fields and therefore need to be re-entered even if the value isnt being changed. 
+
+* Booking form complete - need to send data and store it in each artist 
+
+## License
+
+MIT License
+
+Copyright (c) 2023 Jake Elsberry
+
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
 
 ## Research & Planning Log
@@ -126,8 +207,10 @@ https://www.youtube.com/watch?v=HW5roUF2RLg
 4:00 - Researching hooks vs class state management in react
 
 4:30 - know how to proceed tomorrow to refactor state management, followed along with help queue to figure it out.
-
+```
 ### Sunday, 12/17
+```
+
 
 9:00pm - want to have a clickable calendar that can schedule, looking at example repo from https://fullcalendar.io/
 
@@ -137,13 +220,13 @@ https://github.com/fullcalendar/fullcalendar-examples/tree/main/webpack
 
 10:10: Adding calendar to my project, done researching
 
-### Monday, 12/18
-
 12:00 Read full calendar docs again
 
 1:00 abandon calendar for now, back to coding
-
+```
 ### Monday, 12/18
+```
+
 9:30 - plan day, between new client form and adding authenticantion
 
 9:30-12:30 coding
@@ -156,34 +239,9 @@ code from 12:30 - 4:30
 
 ```
 
-### Tuesday, 12/18
+### Tuesday, 12/19
 ```
 * 5:30 Pivot from styling to planning for tomorrow and organizing README
 
 * EOD, start with artist appointments tomorrow, then try and tackle user data?
-```
-## License
-
-MIT License
-
-Copyright (c) 2023 Jake Elsberry
-
-```
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 ```
